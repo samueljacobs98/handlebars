@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/styles/home.css" />
+
+<h1>Items</h1>
+<ul class="item-box">
+  {{#each items}}
+    <li class="item">
+      {{this.name}}
+      <ul class="item-links">
+        {{#each this.links}}
+          <li class="item-link"><a href="{{this.href}}">{{this.rel}}</a></li>
+        {{/each}}
+      </ul>
+    </li>
+  {{/each}}
+</ul>
